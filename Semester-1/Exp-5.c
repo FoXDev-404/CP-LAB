@@ -1,6 +1,6 @@
 /*AIM:- Write a program to swaps value of two variables using a third variable.*/
 
-// Author: Rajpal Nishad FT-2 Roll No.-23
+// Author:- Rajpal Nishad FT-2 Roll No.-23
 
 #include <stdio.h>
 
@@ -19,7 +19,7 @@ int main()
 
     printf("After Swappingn\n");
     printf("First variable = % f\n", var1);
-    printf("Second variable = % fn ", var2);
+    printf("Second variable = % f", var2);
 
     return 0;
 }
