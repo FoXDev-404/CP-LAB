@@ -21,6 +21,10 @@ int main()
     printf("Enter marks of Computer :- ");
     scanf("%f", &comp);
 
+    /*OR we can also write like that
+    printf("Enter marks of five subjects :- ");
+    scanf("%f%f%f%f%f",&eng,&phy,&chem,&math,&comp);  */
+
     total = eng + phy + chem + math + comp;
     percentage = (total / 500.0) * 100;
 
