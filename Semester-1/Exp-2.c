@@ -1,4 +1,4 @@
-/*AIM: Write a program that calculate the Simple Interest and
+/*AIM:- Write a program that calculate the Simple Interest and
 Compound Interest. The Principal, amount and
 Rate of interest and Time are intered through user*/
 
