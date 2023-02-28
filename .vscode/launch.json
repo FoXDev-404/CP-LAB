@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/rajpa/OneDrive/Desktop/CP-LAB/Semester-1/Temp",
-      "program": "c:/Users/rajpa/OneDrive/Desktop/CP-LAB/Semester-1/Temp/build/Debug/outDebug",
+      "cwd": "c:/Users/rajpa/OneDrive/Desktop/CP-LAB/Semester-1",
+      "program": "c:/Users/rajpa/OneDrive/Desktop/CP-LAB/Semester-1/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
