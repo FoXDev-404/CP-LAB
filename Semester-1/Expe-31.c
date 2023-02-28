@@ -1,6 +1,6 @@
 /* AIM: WAP to compare the contents of two files and determine whether they are same or not.*/
 
-// Author:- Rajpal Nishad FT-2 Roll No.-23
+// Author:- Rajpal Nishadc FT-2 Roll No.-23
 
 #include <stdio.h>
 #include <stdlib.h>
