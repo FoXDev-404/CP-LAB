@@ -1,0 +1,2 @@
+C language is a high-level programming language that was first developed in the 1970s by Dennis Ritchie at Bell Labs. It is a general-purpose language that is widely used in the development of operating systems, device drivers, embedded systems, scientific and engineering applications, and other software that requires low-level hardware access.
+is

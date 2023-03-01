@@ -1,57 +1,57 @@
 /* AIM: WAP to compare the contents of two files and determine whether they are same or not.*/
 
-// Author:- Rajpal Nishadc FT-2 Roll No.-23
+// Author:- Rajpal Nishad FT-2 Roll No.-23
 
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
 int main()
 {
-    FILE *file1, *file2;
-    char ch1, ch2;
-    char filename1[50], filename2[50];
+    FILE *f_ptr_1, *f_ptr_2;
+    char path[256];
+    char string_1[20];
+    char string_2[20];
+    // Input file 1 path.
+    printf("Input first file name: ");
+    scanf("%s", path);
 
-    printf("Enter the name of first file: ");
-    scanf("%s", filename1);
-    printf("Enter the name of second file: ");
-    scanf("%s", filename2);
-
-    file1 = fopen(filename1, "r");
-    if (file1 == NULL)
+    // Try to open first file
+    f_ptr_1 = fopen(path, "r");
+    if (f_ptr_1 == NULL)
     {
-        printf("Could not open %s\n", filename1);
-        exit(1);
+        printf("Error! Unable to open the path.");
+        return 1;
     }
 
-    file2 = fopen(filename2, "r");
-    if (file2 == NULL)
+    // Input file 2 path.
+    printf("Input second file path: ");
+    scanf("%s", path);
+
+    // Try to open second file
+    f_ptr_2 = fopen(path, "r");
+    if (f_ptr_2 == NULL)
     {
-        printf("Could not open %s\n", filename2);
-        fclose(file1);
-        exit(1);
+        printf("Error! Unable to open the file.");
+        fclose(f_ptr_1);
+        return 1;
     }
 
-    while ((ch1 = fgetc(file1)) != EOF && (ch2 = fgetc(file2)) != EOF)
+    // Finding whether the content of files are the same or not.
+    while ((!feof(f_ptr_1)) && (!feof(f_ptr_2)))
     {
-        if (ch1 != ch2)
+        fscanf(f_ptr_1, "%s", string_1);
+        fscanf(f_ptr_2, "%s", string_2);
+        if (strcmp(string_1, string_2) != 0)
         {
-            printf("Files are not the same.\n");
-            fclose(file1);
-            fclose(file2);
-            exit(0);
+            printf("The content of files are not the same.");
+            fclose(f_ptr_1);
+            fclose(f_ptr_2);
+            return 0;
         }
     }
+    printf("The content of the files are the same.");
+    fclose(f_ptr_1);
+    fclose(f_ptr_2);
 
-    if (ch1 == EOF && ch2 == EOF)
-    {
-        printf("Files are the same.\n");
-    }
-    else
-    {
-        printf("Files are not the same.\n");
-    }
-
-    fclose(file1);
-    fclose(file2);
     return 0;
 }

@@ -7,41 +7,28 @@
 
 int main()
 {
-    int num, originalNum, remainder, n = 0;
-    double result = 0.0;
+    int num, sum, digit, i;
 
-    printf("Armstrong numbers from 1 to 1000:\n");
+    printf("Armstrong numbers from 1 to 1000 are: \n");
 
-    for (num = 1; num <= 1000; ++num)
+    for (i = 1; i <= 1000; i++)
     {
-        originalNum = num;
+        num = i;
+        sum = 0;
 
-        // count number of digits
-        while (originalNum != 0)
+        // find the sum of the cube of each digit
+        while (num > 0)
         {
-            originalNum /= 10;
-            ++n;
+            digit = num % 10;
+            sum += pow(digit, 3);
+            num /= 10;
         }
 
-        originalNum = num;
-
-        // calculate result
-        while (originalNum != 0)
+        // if sum is equal to the number, it is an Armstrong number
+        if (i == sum)
         {
-            remainder = originalNum % 10;
-            result += pow(remainder, n);
-            originalNum /= 10;
+            printf("%d\t", i);
         }
-
-        // check if num is Armstrong number
-        if ((int)result == num)
-        {
-            printf("%d\t", num);
-        }
-
-        // reset variables for next iteration
-        n = 0;
-        result = 0;
     }
 
     return 0;
